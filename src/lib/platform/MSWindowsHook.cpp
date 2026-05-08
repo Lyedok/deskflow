@@ -404,6 +404,12 @@ static bool keyboardHookHandler(WPARAM wParam, LPARAM lParam)
     // let certain keys pass through
     switch (wParam) {
     case VK_CAPITAL:
+      // CapsLock is commonly remapped by tools such as CapsLang.  If we let
+      // the physical key reach Windows while relaying to a secondary screen,
+      // the server toggles CapsLock locally instead of letting the secondary
+      // handle the key.
+      return true;
+
     case VK_NUMLOCK:
     case VK_SCROLL:
       // pass event on.  we want to let these through to

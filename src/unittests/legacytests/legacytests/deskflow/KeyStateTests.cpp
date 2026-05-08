@@ -140,7 +140,7 @@ TEST(KeyStateTests, fakeKeyDown_isIgnoredKey_fakeKeyNotCalled)
 
   EXPECT_CALL(keyState, fakeKey(_)).Times(0);
 
-  keyState.fakeKeyDown(kKeyCapsLock, 0, 0, "en");
+  keyState.fakeKeyDown(kKeyNumLock, 0, 0, "en");
 }
 
 TEST(KeyStateTests, fakeKeyDown_mapReturnsKeystrokes_fakeKeyCalled)

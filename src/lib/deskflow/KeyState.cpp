@@ -983,7 +983,6 @@ int32_t KeyState::getEffectiveGroup(int32_t group, int32_t offset) const
 bool KeyState::isIgnoredKey(KeyID key, KeyModifierMask) const
 {
   switch (key) {
-  case kKeyCapsLock:
   case kKeyNumLock:
   case kKeyScrollLock:
     return true;
