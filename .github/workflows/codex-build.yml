@@ -4,10 +4,6 @@
 name: Codex Build
 
 on:
-  push:
-    branches:
-      - master
-      - "codex/**"
   workflow_dispatch:
 
 env:
